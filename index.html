@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasbeeh</title>
+    <style>
+          .Container
+          {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+          #dis
+          {
+            border: solid black 1px;
+            padding: 50px;
+            border-radius: 50px;
+            box-shadow: 20px 20px 20px 5px black;
+            font-size: 200px;
+          }
+          .btn
+          {
+            border-radius: 50px;
+            background-color: transparent;
+            height: 100px;
+            width: 200px;
+            font-size: 60px;
+            cursor: pointer;
+            margin-top: 120px;
+            
+          }
+          .btn:hover
+          {
+            background-color: black;
+            color: white;
+            transition-duration: 1s;
+          }
+          .Reset
+          {
+            border-radius: 50px;
+            background-color: transparent;
+            height: 100px;
+            width: 200px;
+            font-size: 60px;
+            cursor: pointer;
+            margin-top: 120px;
+            margin-right: 100px;
+          }
+          .Reset:hover
+          {
+            background-color: black;
+            color: white;
+            transition-duration: 1s;
+          }
+          .Btns{
+            display: flex;
+            width: 500px;
+            justify-content: center;
+            flex-direction: row;
+                /* border: solid red 4px; */
+          }
+    </style>
+</head>
+<body>
+    <div class="Container">
+        <div id="dis">
+            00
+        </div>
+        <div class="Btns">
+            <button class="Reset" onclick="Reset()">Reset</button>
+            <button class="btn" onclick="Change()">Add</button>
+        </div>
+    </div>
+</body>
+<script>
+    let x=document.getElementById("dis")
+    var y=0;
+    function Change()
+    {
+        y++;
+        if(y<10)
+        {
+            x.innerText="0"+y
+        }
+        else
+        {
+            x.innerText=y;
+        }
+    }
+    function Reset()
+    {
+        x.innerText="00"
+    }
+</script>
+</html>
